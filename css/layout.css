@@ -1,0 +1,48 @@
+/************ common ************/
+body{ 
+	background:#000 url(../img/ftv6.jpg) no-repeat; background-size: cover; background-attachment: fixed; 
+}
+section{display:flex;}
+
+.layout{width:calc(100% - 40px); margin:0 auto; height:100%; position:relative; display:flex; justify-content:space-between; }
+
+.main_left{width:35%; padding:50px 0;}
+.main_right{width:calc(65% - 50px); padding-bottom:30px; }
+.main_right section{flex-direction: column;}
+
+/*-- #1 main --*/
+.slogan{display:flex; flex-direction: column; align-items: flex-start;}
+.slogan p{font-size:5em;  font-weight:bolder; color:var(--main-color-white); } 
+.slogan > span{font-size:4.1em; margin-bottom:40px; font-weight:bold; color:none;  text-shadow: -1px 0px var(--main-color-white), 0px 1px var(--main-color-white), 1px 0px var(--main-color-white), 0px -1px var(--main-color-white);}
+.slogan img{width:100%; max-width:100%; margin:0 auto 30px;}
+.slogan a{width:100%; padding:10px; display:flex; align-items: center; justify-content: center; border:1px solid rgba(255,255,255,0.8); background:rgba(0,0,0,0.3); opacity:0.5; transition: all 0.3s;}
+.slogan a:hover{opacity: 1;}
+.slogan a span{font-size:1.125em; position:relative; display:inline-block; padding-left:30px; color:var(--main-color-white);}
+.slogan a span:before{position:absolute; width: 25px; height: 20px; content:''; top:50%; left:0; transform: translateY(-50%); background:url(../img/email_ico.png) no-repeat center; background-size: cover;}
+
+/*-- #2 bio --*/
+section .tit{position:relative; font-size:1.5em; margin-bottom:15px; padding-bottom:15px; color:var(--main-color-white);}
+section .tit:after{position:absolute; width: 25px; height: 1px; content:''; bottom:0; left:0; background:rgba(255,255,255,0.5);}
+.m_sec2 {padding:30px 0 50px;}
+.m_sec2 ul li{margin-bottom:35px; font-size:1.025em; line-height:1.6em; color:var(--main-color-white);}
+
+/*-- #3 video --*/
+.m_sec3 ul{display:flex; flex-direction: column;}
+.m_sec3 ul li{display:flex; justify-content: space-between; align-items: center; padding:25px 10px; border-bottom:1px solid var(--main-color-gray05);}
+.m_sec3 ul li p{font-size:1.3em; color:var(--main-color-white);}
+.m_sec3 ul li a{display:inline-block; width:40px; height:40px; background:url(../img/arrow.svg); background-size: cover;  transition: all 0.3s;}
+.m_sec3 ul li a:hover{transform: rotate(45deg);}
+
+/* ~ 767px */
+@media screen and (max-width:768px){
+	body{font-size:14px; background-size: 150%; background-position: bottom left;}
+	.layout{flex-direction: column;}
+	.main_left,
+	.main_right{width:100%;}
+	.slogan{align-items: center;}
+	.slogan p{font-size:4em;}
+	.slogan > span{font-size:3em;}
+	.m_sec3 ul li{padding:20px 0;}
+	.m_sec3 ul li p{font-size:1.025em;}
+	.m_sec3 ul li a{width:35px; height:35px;}
+}
